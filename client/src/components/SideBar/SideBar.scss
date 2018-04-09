@@ -1,0 +1,11 @@
+@import '../Css/index.scss';
+
+.SideBar{
+  @extend .page-padding-vertical;
+  height:100vh;
+    overflow-y: scroll;
+  background:gold;
+  li a{
+    color:tomato;
+  }
+}

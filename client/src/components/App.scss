@@ -1,0 +1,12 @@
+@import './Css/index.scss';
+
+
+.App{
+  @extend .flex-row;
+  .SideBar{
+    width:200px;
+  }
+  .Content{
+    width:calc(100vw - 200px);
+  }
+}

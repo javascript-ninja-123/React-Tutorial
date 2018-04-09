@@ -1,0 +1,22 @@
+.page-margin-top {
+  margin-top: 2em; }
+
+.page-width {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw; }
+
+.flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.page-padding-vertical, .SideBar {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
+.SideBar {
+  height: 100vh;
+  overflow-y: scroll;
+  background: gold; }
+  .SideBar li a {
+    color: tomato; }

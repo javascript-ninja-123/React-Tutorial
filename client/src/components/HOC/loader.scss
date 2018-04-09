@@ -1,0 +1,7 @@
+@import '../Css/index.scss';
+
+.Loader{
+@extend .flex-row;
+align-items: center;
+justify-content: center;
+}
