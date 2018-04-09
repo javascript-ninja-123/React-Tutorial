@@ -16,13 +16,16 @@ app.use((err,req,res,next) => {
   if(err) return res.status(422).send({err:err.message})
 });
 
-if (['production'].includes(process.env.NODE_ENV)) {
-  app.use(express.static('client/build'));
-
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve('client', 'build', 'index.html'));
-  });
+if(process.env.NODE_ENV === 'production'){
+   //Express will serve up production assets
+   //like our main.js file, or main.css file
+   app.use(express.static('client/build'));
+   //express will serve up the index.thml
+   //if it doesn't recongize the routes
+   const path = require('path');
+   app.get('*', (req,res) => {
+     res.sendFile(path.resolve(__dirname, 'client','build','index.html'));
+   })
 }
 
 
