@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "configure": "./bin/configuredb.sh",
     "server": "nodemon index.js",
@@ -12,6 +12,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "heroku-postbuild": "cd clients/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+  },
+  "engines": {
+  "node":"8.9.1"
   },
   "author": "",
   "license": "ISC",
